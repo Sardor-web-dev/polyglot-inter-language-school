@@ -53,7 +53,7 @@ export function Header() {
               <LocaleSwitcher />
               <Link
                 href="/login"
-                className="text-[11px] font-medium tracking-widest uppercase text-white border border-white/55 hover:border-white px-5 py-[9px] transition-colors duration-200"
+                className="text-[11px] font-medium tracking-widest uppercase text-white border border-white/55 hover:border-white px-5 py-2.25 transition-colors duration-200"
               >
                 {t("login")}
               </Link>
@@ -65,7 +65,7 @@ export function Header() {
       {/* ── Side drawer ─────────────────────────────────── */}
       <div
         className={cn(
-          "fixed inset-0 z-[100] transition-all duration-300",
+          "fixed inset-0 z-100 transition-all duration-300",
           open ? "pointer-events-auto" : "pointer-events-none"
         )}
         aria-hidden={!open}

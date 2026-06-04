@@ -28,7 +28,7 @@ export function HeroSection() {
           {t("heading")}
         </h1>
 
-        <p className="mt-7 text-white/80 text-base md:text-[17px] leading-[1.7] max-w-[680px]">
+        <p className="mt-7 text-white/80 text-base md:text-[17px] leading-[1.7] max-w-170">
           {t("subtext")}
         </p>
 
