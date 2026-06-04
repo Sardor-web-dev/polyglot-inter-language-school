@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
+/* ─── Design tokens ─────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary:         #142444;   /* darkest navy */
+  --navy-section:    #1B3C78;   /* medium navy — school choice section */
+  --enrollment-bg:   #0F2040;   /* dark navy — enrollment section */
+  --accent:          #C4911E;   /* gold / amber */
+  --accent-hover:    #D4A32E;
+  --surface:         #F5F1E8;   /* warm cream */
+  --text-base:       #1a1a1a;
+  --text-muted:      #888888;
+  --text-soft:       #555555;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary:          var(--primary);
+  --color-navy-section:     var(--navy-section);
+  --color-enrollment-bg:    var(--enrollment-bg);
+  --color-accent:           var(--accent);
+  --color-accent-hover:     var(--accent-hover);
+  --color-surface:          var(--surface);
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans:  var(--font-inter), "Inter", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  color: var(--text-base);
+  background: #fff;
 }

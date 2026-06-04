@@ -1,0 +1,94 @@
+{
+  "header": {
+    "menu": "WHAT WE VALUE",
+    "login": "LOGIN",
+    "apply": "APPLY",
+    "nav": {
+      "about": "About Us",
+      "education": "Education",
+      "campus": "Campus",
+      "life": "School Life",
+      "admissions": "Admissions",
+      "contacts": "Contacts"
+    }
+  },
+  "hero": {
+    "heading": "Academic environment for real life.",
+    "subtext": "We built Polyglot International School in Samarkand around three main priorities of parents: strong education, absolute safety, and the right life values for children.",
+    "cta1": "SCHEDULE A MEETING",
+    "cta2": "ABOUT US"
+  },
+  "certificates": {
+    "heading": "International certificates without tutors",
+    "body": "We guide every student to clear, measurable academic results recognised worldwide.",
+    "contentLabel": "Content",
+    "item1": "Direct preparation for IELTS (target 7.0+), SAT (1400+) and HSK (Chinese language).",
+    "item2": "Official exams are taken directly at school, in a calm environment for the child.",
+    "boyAlt": "Students in a music lesson — Polyglot International School",
+    "girlAlt": "Student in Polyglot International School uniform"
+  },
+  "schoolChoice": {
+    "heading": "Choosing a school is not choosing a building or a programme.",
+    "photo1Alt": "Modern school learning hall",
+    "photo2Alt": "Conference hall and lecture room",
+    "photo3Alt": "Working space and co-working area"
+  },
+  "features": {
+    "heading": "Readiness for business and adult life.",
+    "subtext": "The school doesn't isolate a child from society — it develops practical independence and social intelligence.",
+    "card1Title": "Friday Talk",
+    "card1Body": "Weekly meetings and networking with active entrepreneurs and top managers.",
+    "card1Alt": "Friday Talk — meetings with entrepreneurs",
+    "card2Title": "Practical Skills",
+    "card2Body": "Financial literacy, marketing, podcast creation and public speaking.",
+    "card2Alt": "Practical skills — students at desks",
+    "card3Title": "Culture",
+    "card3Body": "Etiquette, cultural behavior and communication in any environment.",
+    "card3Alt": "Cultural education"
+  },
+  "campus": {
+    "heading": "A building as a promise. Every detail is a design decision, not a coincidence.",
+    "body": "We built the campus around the question: «What should surround a child so that 11 years at school become a time of growth, not survival?» Earthquake-resistant construction, individual transport, laboratories for real experiments — these aren't features, they're basic environmental hygiene.",
+    "stat1Value": "12 000 m²",
+    "stat1Label": "Five floors in the centre of Samarkand",
+    "stat2Value": "5",
+    "stat2Label": "Labs, VR-class, stadium, sports hall",
+    "stat3Value": "24/7",
+    "stat3Label": "Video surveillance and security",
+    "stat4Value": "IQAir",
+    "stat4Label": "Continuous air quality monitoring",
+    "stat5Value": "Dining",
+    "stat5Label": "Buffet menu designed by nutritionists",
+    "stat6Value": "Transport",
+    "stat6Label": "Individual transfer for every student",
+    "imageAlt": "Aerial view of Polyglot International School campus — Samarkand"
+  },
+  "founder": {
+    "heading": "A school founded by people who went through this path themselves.",
+    "para1": "Polyglot was founded by {name} — a graduate of {unis}, with managerial and public sector experience focused on education as a strategic resource.",
+    "founderName": "Shokhrukh Kudratov",
+    "founderUnis": "Harvard, University of Edinburgh and Viadrina",
+    "para2": "The school team are specialists with international practice ({unis}) and over a decade of experience in school education.",
+    "teamUnis": "University of Birmingham, ISF",
+    "photoAlt": "Shokhrukh Kudratov — founder of Polyglot International School"
+  },
+  "enrollment": {
+    "heading": "Enrolment for 2026–2027 academic year is open.",
+    "body": "Testing via the state programme for transfer to any grade; for Grade 1 — a conversation with a psychologist.",
+    "cta": "FILL OUT THE FORM"
+  },
+  "footer": {
+    "tagline": "A premium private school in Samarkand. We nurture strong, educated, globally-minded individuals from grades 1 to 11.",
+    "schoolCol": "SCHOOL",
+    "contactsCol": "CONTACTS",
+    "admissionsCol": "ADMISSIONS",
+    "link1": "About Us",
+    "link2": "Education",
+    "link3": "School Life",
+    "address": "Samarkand, Uzbekistan",
+    "enrollmentNote": "Enrolment for 2026/27 academic year is open.",
+    "applyBtn": "APPLY",
+    "copyright": "© {year} Polyglot International School. All rights reserved.",
+    "brand": "POLYGLOT SCHOOL {year}"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "header": {
+    "menu": "BIZ QADRLAYDIGAN",
+    "login": "KIRISH",
+    "apply": "ARIZA BERISH",
+    "nav": {
+      "about": "Maktab haqida",
+      "education": "Ta'lim",
+      "campus": "Kampus",
+      "life": "Maktab hayoti",
+      "admissions": "Qabul",
+      "contacts": "Aloqa"
+    }
+  },
+  "hero": {
+    "heading": "Haqiqiy hayot uchun akademik muhit.",
+    "subtext": "Biz Samarqandda Polyglot International School ni ota-onalarning uchta asosiy ustuvorligi atrofida qurdik: kuchli ta'lim, mutlaq xavfsizlik va bolaning to'g'ri hayotiy yo'nalishlari.",
+    "cta1": "UCHRASHUVGA YOZILISH",
+    "cta2": "MAKTAB HAQIDA"
+  },
+  "certificates": {
+    "heading": "Repetitorsiz xalqaro sertifikatlar",
+    "body": "Biz har bir o'quvchini dunyo tan oladigan aniq, o'lchanadigan akademik natijalarga olib boramiz.",
+    "contentLabel": "Kontent",
+    "item1": "IELTS (maqsad 7.0+), SAT (1400+) va HSK (xitoy tili) ga to'g'ridan-to'g'ri tayyorgarlik.",
+    "item2": "Rasmiy imtihonlar maktabning o'zida, bola uchun tinch muhitda topshiriladi.",
+    "boyAlt": "Polyglot International School — musiqa darsidagi o'quvchilar",
+    "girlAlt": "Polyglot International School formасидаги o'quvchi qiz"
+  },
+  "schoolChoice": {
+    "heading": "Maktab tanlash — bu bino yoki dastur tanlash emas.",
+    "photo1Alt": "Zamonaviy o'quv zali",
+    "photo2Alt": "Konferens zal va ma'ruza xonasi",
+    "photo3Alt": "Ish maydoni va kovorking"
+  },
+  "features": {
+    "heading": "Biznes va katta hayotga tayyorlik.",
+    "subtext": "Maktab bolani jamiyatdan ajratmaydi — kundalik mustaqillik va ijtimoiy intellektni rivojlantiradi.",
+    "card1Title": "Friday Talk",
+    "card1Body": "Faol tadbirkorlar va top-menejerlar bilan haftalik uchrashuvlar va tarmoq.",
+    "card1Alt": "Friday Talk — tadbirkorlar bilan uchrashuvlar",
+    "card2Title": "Amaliy ko'nikmalar",
+    "card2Body": "Moliyaviy savodxonlik, marketing, podkast yaratish va ommaviy nutq.",
+    "card2Alt": "Amaliy ko'nikmalar — o'quvchilar partada",
+    "card3Title": "Madaniyat",
+    "card3Body": "Etika, madaniy xulq-atvor va har qanday muhitda muloqot darslari.",
+    "card3Alt": "Madaniy tarbiya"
+  },
+  "campus": {
+    "heading": "Bino — bu va'da. Har bir detal loyiha yechimi, tasodif emas.",
+    "body": "Biz kampusni quyidagi savol asosida qurdik: «Bolani nima o'rab turishi kerak, shunda maktabda 11 yil o'sish davri bo'lsin, omon qolish emas?» Zilzilabardosh konstruksiya, individual transfer, haqiqiy tajribalar o'tkaziladigan laboratoriyalar — bu funksiyalar emas, bu muhit gigyenasining asosi.",
+    "stat1Value": "12 000 m²",
+    "stat1Label": "Samarqand markazida besh qavat",
+    "stat2Value": "5",
+    "stat2Label": "Laboratoriyalar, VR-sinf, stadion, sport zali",
+    "stat3Value": "24/7",
+    "stat3Label": "Video kuzatuv va qo'riqlash",
+    "stat4Value": "IQAir",
+    "stat4Label": "Uzluksiz havo sifati monitoringi",
+    "stat5Value": "Ovqatlanish",
+    "stat5Label": "Nutrisiologlar menyusi bo'yicha shved stoli",
+    "stat6Value": "Transport",
+    "stat6Label": "Har bir o'quvchi uchun individual transfer",
+    "imageAlt": "Polyglot International School kampusining qushqarasidan ko'rinishi — Samarqand"
+  },
+  "founder": {
+    "heading": "Bu yo'ldan o'tgan odamlar tomonidan asos solingan maktab.",
+    "para1": "Polyglot {name} tomonidan asos solingan — {unis} bitiruvchisi, ta'limni strategik resurs sifatida ko'rgan boshqaruv va davlat tajribasiga ega.",
+    "founderName": "Shohruх Kudratov",
+    "founderUnis": "Harvard, University of Edinburgh va Viadrina",
+    "para2": "Maktab jamoasi — xalqaro amaliyotga ega mutaxassislar ({unis}) va maktab ta'limida o'n yildan ortiq tajribaga ega.",
+    "teamUnis": "University of Birmingham, ISF",
+    "photoAlt": "Shohruх Kudratov — Polyglot International School asoschisi"
+  },
+  "enrollment": {
+    "heading": "2026–2027 o'quv yiliga qabul ochiq.",
+    "body": "Istalgan sinfga o'tkazish uchun davlat dasturi bo'yicha test; 1-sinf uchun — psixolog bilan suhbat.",
+    "cta": "SHAKLNI TO'LDIRISH"
+  },
+  "footer": {
+    "tagline": "Samarqanddagi premium xususiy maktab. 1-sinfdan 11-sinfgacha kuchli, bilimli va dunyoga ochiq shaxslarni tarbiyalaymiz.",
+    "schoolCol": "MAKTAB",
+    "contactsCol": "ALOQA",
+    "admissionsCol": "QABUL",
+    "link1": "Maktab haqida",
+    "link2": "Ta'lim",
+    "link3": "Maktab hayoti",
+    "address": "Samarqand, O'zbekiston",
+    "enrollmentNote": "2026/27 o'quv yiliga qabul ochiq.",
+    "applyBtn": "ARIZA",
+    "copyright": "© {year} Polyglot International School. Barcha huquqlar himoyalangan.",
+    "brand": "POLYGLOT SCHOOL {year}"
+  }
+}
