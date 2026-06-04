@@ -41,13 +41,13 @@ export function FounderSection() {
 
           {/* Right — portrait */}
           <div>
-            <div className="relative aspect-3/4 max-w-sm mx-auto lg:max-w-none overflow-hidden">
+            <div className="relative w-full aspect-4/3 overflow-hidden">
               <Image
                 src="/succes.png"
                 alt={t("photoAlt")}
                 fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 80vw, 45vw"
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 90vw, 45vw"
               />
             </div>
           </div>

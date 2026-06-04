@@ -7,9 +7,9 @@ export function CertificatesSection() {
   return (
     <section className="bg-surface py-16 md:py-20 lg:py-24" aria-labelledby="certificates-heading">
       <div className="max-w-360 mx-auto px-7.5">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr_1fr] gap-0 lg:gap-10 xl:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-10 xl:gap-12 items-start">
 
-          {/* Left image — boy with violin */}
+          {/* Left image — boy with violin (shorter) */}
           <div className="hidden lg:block">
             <div className="relative aspect-4/5 overflow-hidden">
               <Image
@@ -23,7 +23,7 @@ export function CertificatesSection() {
           </div>
 
           {/* Center — text */}
-          <div className="flex flex-col py-2">
+          <div className="flex flex-col lg:min-h-130">
             <h2
               id="certificates-heading"
               className="font-serif font-normal text-[#1a1a1a] leading-[1.15] text-[34px] md:text-[40px] lg:text-[44px] mb-5"
@@ -31,16 +31,16 @@ export function CertificatesSection() {
               {t("heading")}
             </h2>
 
-            <p className="text-[#555] text-[15px] md:text-[16px] leading-[1.7] mb-10">
+            <p className="text-[#555] text-[15px] md:text-[16px] leading-[1.7]">
               {t("body")}
             </p>
 
-            {/* Контент block */}
-            <div className="mt-auto">
+            {/* Контент block — pushed to bottom */}
+            <div className="mt-auto pt-16">
               <p className="font-semibold text-[13px] text-[#1a1a1a] mb-4 tracking-wide">
                 {t("contentLabel")}
               </p>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-4 border-t border-[#d5d0c5] pt-5">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-4 border-t border-[#c9c3b5] pt-5">
                 <p className="text-[13px] md:text-[14px] text-[#444] leading-[1.65]">
                   {t("item1")}
                 </p>
@@ -51,9 +51,9 @@ export function CertificatesSection() {
             </div>
           </div>
 
-          {/* Right image — girl in uniform */}
+          {/* Right image — girl in uniform (taller) */}
           <div className="hidden lg:block">
-            <div className="relative aspect-4/5 overflow-hidden">
+            <div className="relative aspect-5/9 overflow-hidden">
               <Image
                 src="/children.jpg"
                 alt={t("girlAlt")}

@@ -55,16 +55,17 @@ export function CampusSection() {
         </dl>
       </div>
 
-      {/* Full-width campus render */}
-      <div className="relative flex items-center justify-center w-full aspect-16/7">
-        <Image
-          src="/campus.png"
-          alt={t("imageAlt")}
-          width={1440}
-          height={20}
-          className="max-w-355 max-h-170"
-          sizes="100vw"
-        />
+      {/* Campus render — contained within page gutters */}
+      <div className="max-w-360 mx-auto px-7.5 pb-16 md:pb-20">
+        <div className="relative w-full aspect-16/7 overflow-hidden">
+          <Image
+            src="/campus.png"
+            alt={t("imageAlt")}
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
       </div>
     </section>
   );

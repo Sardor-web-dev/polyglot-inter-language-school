@@ -35,13 +35,13 @@ export function HeroSection() {
         <div className="mt-11 flex flex-col sm:flex-row items-center gap-4">
           <Link
             href="/admissions/apply"
-            className="inline-block text-[11px] font-medium tracking-widest uppercase text-white border border-white/60 hover:border-white hover:bg-white/10 px-9 py-3.5 transition-colors duration-200 w-full sm:w-auto text-center"
+            className="inline-block text-[11px] font-medium tracking-widest uppercase text-white border border-white/60 hover:border-white hover:bg-white/15 hover:backdrop-blur-md px-9 py-3.5 transition duration-300 w-full sm:w-auto text-center"
           >
             {t("cta1")}
           </Link>
           <Link
             href="/about"
-            className="inline-block text-[11px] font-medium tracking-widest uppercase text-white border border-white/60 hover:border-white hover:bg-white/10 px-9 py-3.5 transition-colors duration-200 w-full sm:w-auto text-center"
+            className="inline-block text-[11px] font-medium tracking-widest uppercase text-white border border-white/60 hover:border-white hover:bg-white/15 hover:backdrop-blur-md px-9 py-3.5 transition duration-300 w-full sm:w-auto text-center"
           >
             {t("cta2")}
           </Link>

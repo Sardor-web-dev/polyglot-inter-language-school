@@ -53,7 +53,7 @@ export function Header() {
               <LocaleSwitcher />
               <Link
                 href="/login"
-                className="text-[11px] font-medium tracking-widest uppercase text-white border border-white/55 hover:border-white px-5 py-2.25 transition-colors duration-200"
+                className="text-[11px] font-medium tracking-widest uppercase text-white border border-white/55 hover:border-white hover:bg-white/15 hover:backdrop-blur-md px-5 py-2.25 transition duration-300"
               >
                 {t("login")}
               </Link>
