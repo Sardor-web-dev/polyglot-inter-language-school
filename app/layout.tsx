@@ -31,7 +31,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Polyglot International School",
-    description: "Академическая среда для реальной жизни. Самарканд, Узбекистан.",
+    description:
+      "Академическая среда для реальной жизни. Самарканд, Узбекистан.",
     type: "website",
   },
 };
@@ -46,9 +47,11 @@ export default async function RootLayout({
     <html lang={locale} className={`${cormorant.variable} ${inter.variable}`}>
       <body className="min-h-full antialiased">
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <div className="pl-7 pr-7">
+            <Header />
+            <main>{children}</main>
+          </div>
+            <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
