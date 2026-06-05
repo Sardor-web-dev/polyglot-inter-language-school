@@ -15,8 +15,8 @@ export function Header() {
   return (
     <>
       {/* ── Top bar ─────────────────────────────────────── */}
-      <header className="absolute top-[30px] left-0 right-0 z-50">
-        <div className="max-w-360 mx-auto px-[30px] lg:px-12.5">
+      <header className="absolute top-7.5 left-0 right-0 z-50">
+        <div className="max-w-360 mx-auto px-7.5 lg:px-12.5">
           <div className="flex items-center justify-between h-18 lg:h-21">
 
             {/* Left: hamburger + label */}
@@ -86,7 +86,7 @@ export function Header() {
             open ? "translate-x-0" : "-translate-x-full"
           )}
         >
-          <div className="flex items-center justify-between px-[30px] py-7 border-b border-white/10">
+          <div className="flex items-center justify-between px-7.5 py-7 border-b border-white/10">
             <span className="text-white text-[11px] font-medium tracking-widest uppercase">
               {t("menu")}
             </span>
@@ -99,7 +99,7 @@ export function Header() {
             </button>
           </div>
 
-          <nav className="flex-1 px-[30px] py-8">
+          <nav className="flex-1 px-7.5 py-8">
             <ul className="flex flex-col gap-0.5" role="list">
               {(
                 ["about", "education", "campus", "life", "admissions", "contacts"] as const
@@ -117,7 +117,7 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="px-[30px] pb-10">
+          <div className="px-7.5 pb-10">
             <Link
               href="/admissions/apply"
               className="block w-full text-center text-[11px] font-semibold tracking-widest uppercase text-white bg-accent hover:bg-accent-hover py-4 transition-colors duration-200"

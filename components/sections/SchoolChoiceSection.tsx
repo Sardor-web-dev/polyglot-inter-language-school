@@ -28,7 +28,7 @@ export function SchoolChoiceSection() {
   return (
     // Full-bleed — breaks out of the global 30px page gutters
     <section
-      className="w-full overflow-hidden pt-14 md:pt-[72px] lg:pt-20 pb-14 md:pb-[72px]"
+      className="w-full overflow-hidden pt-14 md:pt-18 lg:pt-20 pb-14 md:pb-18"
       style={{ backgroundColor: "#0E4170" }}
       aria-labelledby="school-choice-heading"
     >
@@ -39,7 +39,7 @@ export function SchoolChoiceSection() {
         className="text-white"
       >
         {/* Heading + controls */}
-        <div className="max-w-360 mx-auto px-[30px] pb-10 md:pb-12 flex items-end justify-between gap-6">
+        <div className="max-w-360 mx-auto px-7.5 pb-10 md:pb-12 flex items-end justify-between gap-6">
           <h2
             id="school-choice-heading"
             className="font-serif font-semibold text-white leading-[1.1] text-[34px] sm:text-[42px] md:text-[50px] lg:text-[56px] max-w-3xl"
@@ -53,14 +53,14 @@ export function SchoolChoiceSection() {
         </div>
 
         {/* Photos — left aligned to gutter, bleed right */}
-        <div className="pl-[30px]">
+        <div className="pl-7.5">
           <CarouselContent className="ml-0">
             {photos.map((photo, i) => (
               <CarouselItem
                 key={i}
-                className={`pl-0 mr-[10px] basis-auto ${photo.w} max-w-[88vw]`}
+                className={`pl-0 mr-2.5 basis-auto ${photo.w} max-w-[88vw]`}
               >
-                <div className="relative h-[420px] md:h-[480px] overflow-hidden">
+                <div className="relative h-105 md:h-120 overflow-hidden">
                   {/* parallax layer */}
                   <div data-parallax-layer className="absolute inset-0">
                     <Image

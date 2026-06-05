@@ -14,7 +14,7 @@ export function HeroSection() {
 
   return (
     // 30px frame on every side
-    <section className="bg-white p-[30px]" aria-label="Главный экран">
+    <section className="bg-white p-7.5" aria-label="Главный экран">
       {/* Whole framed box grows from small → large */}
       <motion.div
         initial={{ scale: 0.03 }}
@@ -53,7 +53,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.85, ease: easeOut }}
-            className="mt-7 text-white/80 text-base md:text-[17px] leading-[1.7] max-w-[680px]"
+            className="mt-7 text-white/80 text-base md:text-[17px] leading-[1.7] max-w-170"
           >
             {t("subtext")}
           </motion.p>

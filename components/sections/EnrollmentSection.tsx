@@ -19,7 +19,7 @@ export function EnrollmentSection() {
 
   return (
     // White-framed section (30px side gutters)
-    <section className="bg-white px-[30px] py-2" aria-labelledby="enrollment-heading">
+    <section className="bg-white px-7.5 py-2" aria-labelledby="enrollment-heading">
       <div
         ref={ref}
         className="relative overflow-hidden max-w-360 mx-auto"
@@ -28,7 +28,7 @@ export function EnrollmentSection() {
         {/* Parallax background video (cover / center) */}
         <motion.div
           style={{ y }}
-          className="absolute -top-[10%] left-0 right-0 h-[120%] overflow-hidden pointer-events-none"
+          className="absolute top-[-10%] left-0 right-0 h-[120%] overflow-hidden pointer-events-none"
           aria-hidden="true"
         >
           <iframe
@@ -36,7 +36,7 @@ export function EnrollmentSection() {
             title="IMG_3457"
             allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
             allowFullScreen
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-[4/5] border-0"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full aspect-4/5 border-0"
           />
         </motion.div>
 
@@ -46,7 +46,7 @@ export function EnrollmentSection() {
         {/* Content */}
         <Reveal
           direction="up"
-          className="relative px-[30px] py-20 md:py-28 lg:py-36 text-center"
+          className="relative px-7.5 py-20 md:py-28 lg:py-36 text-center"
         >
           <h2
             id="enrollment-heading"

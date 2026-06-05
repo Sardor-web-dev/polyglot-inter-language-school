@@ -16,10 +16,8 @@ export function CertificatesSection() {
     >
       <div className="max-w-360 mx-auto px-4">
         <div className="flex flex-col xl:flex-row gap-10 xl:gap-12 items-start">
-
           {/* LEFT column */}
           <div className="flex flex-col gap-10 lg:gap-12 flex-1">
-
             {/* Top row: photo (426×530) + text block */}
             <motion.div
               initial={{ opacity: 0, y: 32 }}
@@ -32,13 +30,13 @@ export function CertificatesSection() {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.4, ease: easeOut }}
-                className="group relative w-full sm:w-[426px] h-[420px] sm:h-[530px] shrink-0 overflow-hidden"
+                className="group relative w-full sm:w-106.5 h-105 sm:h-132.5 shrink-0 overflow-hidden"
               >
                 <Image
                   src="/boy.jpg"
                   alt={t("boyAlt")}
                   fill
-                  className="object-cover object-center transition-transform duration-[1100ms] ease-out group-hover:scale-[1.07]"
+                  className="object-cover object-center transition-transform duration-1100m ease-out group-hover:scale-[1.07]"
                   sizes="(max-width: 640px) 100vw, 426px"
                 />
               </motion.div>
@@ -90,13 +88,13 @@ export function CertificatesSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.15, ease: easeOut }}
             whileHover={{ y: -10 }}
-            className="group relative w-full xl:w-[426px] h-[420px] sm:h-[560px] xl:h-[736px] shrink-0 overflow-hidden"
+            className="group relative w-full xl:w-106.5 h-105 sm:h-140 xl:h-184 shrink-0 overflow-hidden"
           >
             <Image
               src="/children.jpg"
               alt={t("girlAlt")}
               fill
-              className="object-cover object-center transition-transform duration-[1100ms] ease-out group-hover:scale-[1.06]"
+              className="object-cover object-center transition-transform duration-1100 ease-out group-hover:scale-[1.06]"
               sizes="(max-width: 1280px) 100vw, 426px"
             />
           </motion.div>

@@ -36,29 +36,29 @@ export function CampusSection() {
     <section className="bg-white" aria-labelledby="campus-heading">
 
       {/* Top text — narrow heading (397px) left, narrow body (768px) right, ~200px gap */}
-      <div className="max-w-360 mx-auto px-[30px] pt-16 md:pt-20 lg:pt-24 pb-12 md:pb-16">
-        <Reveal className="flex flex-col lg:flex-row lg:gap-[200px] gap-8">
+      <div className="max-w-360 mx-auto px-7.5 pt-16 md:pt-20 lg:pt-24 pb-12 md:pb-16">
+        <Reveal className="flex flex-col lg:flex-row lg:gap-50 gap-8">
           <h2
             id="campus-heading"
-            className="font-serif font-semibold text-[#1a1a1a] leading-[1.12] text-[32px] md:text-[40px] lg:text-[44px] lg:w-[397px] shrink-0"
+            className="font-serif font-semibold text-[#1a1a1a] leading-[1.12] text-[32px] md:text-[40px] lg:text-[44px] lg:w-99.25 shrink-0"
           >
             {t("heading")}
           </h2>
-          <p className="text-[#444] text-[15px] md:text-[16px] leading-[1.75] lg:w-[768px] lg:pt-2">
+          <p className="text-[#444] text-[15px] md:text-[16px] leading-[1.75] lg:w-3xl lg:pt-2">
             {t("body")}
           </p>
         </Reveal>
       </div>
 
       {/* Stats — interactive carousel with animated underline */}
-      <div className="max-w-360 mx-auto px-[30px] pb-12 md:pb-16">
+      <div className="max-w-360 mx-auto px-7.5 pb-12 md:pb-16">
         <div className="border-t border-[#e2e2e2] pt-10">
           <Carousel opts={{ align: "start", dragFree: true }}>
             <CarouselContent className="-ml-4">
               {stats.map((stat, i) => {
                 const isActive = i === active;
                 return (
-                  <CarouselItem key={i} className="pl-4 basis-[210px] md:basis-[250px]">
+                  <CarouselItem key={i} className="pl-4 basis-52.5 md:basis-62.5">
                     <button
                       type="button"
                       onClick={() => setActive(i)}
@@ -84,16 +84,16 @@ export function CampusSection() {
                         {stat.value}
                       </motion.span>
 
-                      <span className="text-[#8a8a8a] text-[13px] leading-snug max-w-[200px]">
+                      <span className="text-[#8a8a8a] text-[13px] leading-snug max-w-50">
                         {stat.label}
                       </span>
 
                       {/* baseline + animated active underline */}
-                      <span className="absolute bottom-0 left-0 right-3 h-[2px] bg-[#ececec]" />
+                      <span className="absolute bottom-0 left-0 right-3 h-0.5 bg-[#ececec]" />
                       {isActive && (
                         <motion.span
                           layoutId="campus-tab-underline"
-                          className="absolute bottom-0 left-0 right-3 h-[2px]"
+                          className="absolute bottom-0 left-0 right-3 h-0.5"
                           style={{ backgroundColor: ACTIVE_COLOR }}
                           transition={{ type: "spring", stiffness: 380, damping: 32 }}
                         />
@@ -108,7 +108,7 @@ export function CampusSection() {
       </div>
 
       {/* Campus render */}
-      <Reveal direction="up" className="max-w-360 mx-auto px-[30px] pb-16 md:pb-20">
+      <Reveal direction="up" className="max-w-360 mx-auto px-7.5 pb-16 md:pb-20">
         <div className="relative w-full aspect-16/7 overflow-hidden">
           <Image
             src="/campus.png"
