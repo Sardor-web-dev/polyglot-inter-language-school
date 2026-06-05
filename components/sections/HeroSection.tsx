@@ -6,18 +6,23 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
+// fast → slow → fast velocity profile
+const fastSlowFast = [0.16, 0.5, 0.84, 0.5] as const;
 
 export function HeroSection() {
   const t = useTranslations("hero");
 
   return (
-    // Outer: white frame — 30px on top/left/right, more on bottom
-    <section
-      className="bg-white pt-7.5 px-7.5 pb-12 md:pb-16"
-      aria-label="Главный экран"
-    >
-      {/* Framed image box */}
-      <div className="relative overflow-hidden flex flex-col min-h-[calc(100svh-90px)] md:min-h-[calc(100svh-110px)]">
+    // 30px frame on every side
+    <section className="bg-white p-[30px]" aria-label="Главный экран">
+      {/* Whole framed box grows from small → large */}
+      <motion.div
+        initial={{ scale: 0.03 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.6, ease: fastSlowFast }}
+        style={{ transformOrigin: "center" }}
+        className="relative overflow-hidden flex flex-col min-h-[calc(100svh-60px)]"
+      >
         {/* Background */}
         <div className="absolute inset-0">
           <Image
@@ -34,11 +39,11 @@ export function HeroSection() {
         </div>
 
         {/* Centered content */}
-        <div className="relative flex-1 flex flex-col items-center justify-center text-center px-6 md:px-10 pt-24 pb-8">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 md:px-10 pt-24 pb-8">
           <motion.h1
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: easeOut }}
+            transition={{ duration: 1, delay: 0.7, ease: easeOut }}
             className="font-serif font-semibold text-white leading-[1.06] max-w-5xl text-[44px] sm:text-[64px] md:text-[80px] lg:text-[92px] xl:text-[100px]"
           >
             {t("heading")}
@@ -47,8 +52,8 @@ export function HeroSection() {
           <motion.p
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.15, ease: easeOut }}
-            className="mt-7 text-white/80 text-base md:text-[17px] leading-[1.7] max-w-170"
+            transition={{ duration: 1, delay: 0.85, ease: easeOut }}
+            className="mt-7 text-white/80 text-base md:text-[17px] leading-[1.7] max-w-[680px]"
           >
             {t("subtext")}
           </motion.p>
@@ -56,7 +61,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.3, ease: easeOut }}
+            transition={{ duration: 1, delay: 1, ease: easeOut }}
             className="mt-11 flex flex-col sm:flex-row items-center gap-4"
           >
             <Link
@@ -75,15 +80,18 @@ export function HeroSection() {
         </div>
 
         {/* Slider indicators */}
-        <div
-          className="relative pb-9 flex items-center justify-center gap-3"
+        <motion.div
+          className="relative z-10 pb-9 flex items-center justify-center gap-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.15, ease: easeOut }}
           aria-hidden="true"
         >
           <span className="block w-8 h-0.5 bg-white" />
           <span className="block w-8 h-0.5 bg-white/35" />
           <span className="block w-8 h-0.5 bg-white/35" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

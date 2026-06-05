@@ -20,10 +20,13 @@
   },
   "certificates": {
     "heading": "Repetitorsiz xalqaro sertifikatlar",
-    "body": "Biz har bir o'quvchini dunyo tan oladigan aniq, o'lchanadigan akademik natijalarga olib boramiz.",
+    "body": "Biz har bir o'quvchini dunyo tan oladigan aniq, o'lchanadigan akademik natijalarga olib boramiz. Dastur shunday tuzilganki, xalqaro imtihonlarga tayyorgarlik kundalik o'qishning tabiiy qismiga aylanadi.",
+    "bodyExtra": "Kechki repetitorlar yo'q, dam olish kunlari darsliklar ortida o'tirish yo'q. Til modullari, akademik yozuv va matematika jadvalga singdirilgan — bola imtihonga ortiqcha yuklamasiz va stresssiz to'liq tayyor keladi.",
     "contentLabel": "Kontent",
     "item1": "IELTS (maqsad 7.0+), SAT (1400+) va HSK (xitoy tili) ga to'g'ridan-to'g'ri tayyorgarlik.",
     "item2": "Rasmiy imtihonlar maktabning o'zida, bola uchun tinch muhitda topshiriladi.",
+    "item3": "Shaxsiy yo'nalishlar: murakkablik darajasi har bir o'quvchiga moslashadi.",
+    "item4": "Shaffof tahlil — ota-onalar natijalarni real vaqtda ko'radi.",
     "boyAlt": "Polyglot International School — musiqa darsidagi o'quvchilar",
     "girlAlt": "Polyglot International School formасидаги o'quvchi qiz"
   },

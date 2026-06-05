@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="bg-surface" role="contentinfo">
       {/* ── Main ─────────────────────────────────────────── */}
-      <div className="max-w-360 mx-auto px-7.5 pt-16 md:pt-20 pb-12">
+      <div className="max-w-360 mx-auto px-[30px] pt-16 md:pt-20 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_160px_220px_200px] gap-10 lg:gap-12">
 
           {/* Brand */}
@@ -93,7 +93,7 @@ export function Footer() {
 
       {/* ── Bottom bar ──────────────────────────────────── */}
       <div className="border-t border-[#ddd8cc]">
-        <div className="max-w-360 mx-auto px-7.5 py-5 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div className="max-w-360 mx-auto px-[30px] py-5 flex flex-col sm:flex-row justify-between items-center gap-2">
           <p className="text-[#aaa] text-xs">
             {t("copyright", { year })}
           </p>

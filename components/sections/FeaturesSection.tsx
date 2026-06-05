@@ -25,7 +25,7 @@ export function FeaturesSection() {
       className="bg-white py-16 md:py-20 lg:py-24"
       aria-labelledby="features-heading"
     >
-      <div className="max-w-360 mx-auto px-7.5">
+      <div className="max-w-360 mx-auto px-[30px]">
         <Carousel opts={{ align: "start", dragFree: true }} className="text-[#1a1a1a]">
           <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 lg:gap-14 xl:gap-16 items-start">
 
@@ -46,20 +46,20 @@ export function FeaturesSection() {
               </div>
             </Reveal>
 
-            {/* Right — cards carousel */}
+            {/* Right — cards carousel (w-[400px], h-auto) */}
             <CarouselContent className="-ml-6">
               {cards.map((card) => (
                 <CarouselItem
                   key={card.title}
-                  className="pl-6 basis-80 sm:basis-100"
+                  className="pl-6 basis-auto"
                 >
-                  <article className="group flex flex-col w-full">
-                    <div className="relative aspect-4/3 overflow-hidden mb-4">
+                  <article className="group flex flex-col w-[300px] sm:w-[400px] h-auto">
+                    <div className="relative w-full h-[300px] overflow-hidden mb-4">
                       <Image
                         src={card.image}
                         alt={card.alt}
                         fill
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                         sizes="400px"
                       />
                     </div>

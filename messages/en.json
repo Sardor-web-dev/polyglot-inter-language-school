@@ -20,10 +20,13 @@
   },
   "certificates": {
     "heading": "International certificates without tutors",
-    "body": "We guide every student to clear, measurable academic results recognised worldwide.",
+    "body": "We guide every student to clear, measurable academic results recognised worldwide. The programme is built so that preparation for international exams becomes a natural part of everyday study.",
+    "bodyExtra": "No evening tutors, no weekends buried in textbooks. Language modules, academic writing and mathematics are woven into the schedule — a child arrives at the exam fully prepared, without overload or stress.",
     "contentLabel": "Content",
     "item1": "Direct preparation for IELTS (target 7.0+), SAT (1400+) and HSK (Chinese language).",
     "item2": "Official exams are taken directly at school, in a calm environment for the child.",
+    "item3": "Personalised tracks: difficulty adapts to each individual student.",
+    "item4": "Transparent progress analytics — parents see results in real time.",
     "boyAlt": "Students in a music lesson — Polyglot International School",
     "girlAlt": "Student in Polyglot International School uniform"
   },

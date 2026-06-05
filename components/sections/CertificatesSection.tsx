@@ -1,77 +1,105 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Reveal } from "@/components/ui/Reveal";
+import { motion } from "framer-motion";
+
+const easeOut = [0.22, 1, 0.36, 1] as const;
 
 export function CertificatesSection() {
   const t = useTranslations("certificates");
 
   return (
     <section
-      className="bg-white py-16 md:py-20 lg:py-24"
+      className="bg-white py-16 md:py-20 "
       aria-labelledby="certificates-heading"
     >
-      <div className="max-w-360 mx-auto px-7.5">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+      <div className="max-w-360 mx-auto px-4">
+        <div className="flex flex-col xl:flex-row gap-10 xl:gap-12 items-start">
 
           {/* LEFT column */}
-          <div className="flex flex-col flex-1 gap-10 lg:gap-12">
+          <div className="flex flex-col gap-10 lg:gap-12 flex-1">
 
-            {/* Top row: photo + heading/text */}
-            <Reveal direction="up" className="flex flex-col sm:flex-row gap-6 md:gap-8">
-              <div className="relative w-full sm:w-52.5 shrink-0 aspect-4/5 overflow-hidden">
+            {/* Top row: photo (426×530) + text block */}
+            <motion.div
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, ease: easeOut }}
+              className="flex flex-col sm:flex-row gap-7 md:gap-9"
+            >
+              {/* photo with hover micro-float + zoom */}
+              <motion.div
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.4, ease: easeOut }}
+                className="group relative w-full sm:w-[426px] h-[420px] sm:h-[530px] shrink-0 overflow-hidden"
+              >
                 <Image
                   src="/boy.jpg"
                   alt={t("boyAlt")}
                   fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 640px) 100vw, 210px"
+                  className="object-cover object-center transition-transform duration-[1100ms] ease-out group-hover:scale-[1.07]"
+                  sizes="(max-width: 640px) 100vw, 426px"
                 />
-              </div>
-              <div className="flex flex-col">
+              </motion.div>
+
+              {/* text block */}
+              <div className="flex flex-col justify-center">
                 <h2
                   id="certificates-heading"
-                  className="font-serif font-normal text-[#1a1a1a] leading-[1.15] text-[32px] md:text-[40px] lg:text-[44px] mb-4"
+                  className="font-serif font-normal text-[#1a1a1a] leading-[1.13] text-[32px] md:text-[40px] lg:text-[44px] mb-5"
                 >
                   {t("heading")}
                 </h2>
-                <p className="text-[#555] text-[15px] md:text-[16px] leading-[1.7] max-w-md">
+                <p className="text-[#555] text-[15px] md:text-[16px] leading-[1.7] mb-4">
                   {t("body")}
                 </p>
+                <p className="text-[#777] text-[14px] md:text-[15px] leading-[1.7]">
+                  {t("bodyExtra")}
+                </p>
               </div>
-            </Reveal>
+            </motion.div>
 
-            {/* Bottom row: Контент + two texts */}
-            <Reveal direction="up" delay={0.1} className="mt-auto">
-              <p className="font-semibold text-[13px] text-[#1a1a1a] mb-4 tracking-wide">
+            {/* Bottom row: Контент + 4 text blocks */}
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: easeOut }}
+            >
+              <p className="font-semibold text-[13px] text-[#1a1a1a] mb-5 tracking-wide">
                 {t("contentLabel")}
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5 border-t border-[#dcdcdc] pt-6">
-                <p className="text-[13px] md:text-[14px] text-[#444] leading-[1.65]">
-                  {t("item1")}
-                </p>
-                <p className="text-[13px] md:text-[14px] text-[#444] leading-[1.65]">
-                  {t("item2")}
-                </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 border-t border-[#dcdcdc] pt-6">
+                {(["item1", "item2", "item3", "item4"] as const).map((key) => (
+                  <p
+                    key={key}
+                    className="text-[13px] md:text-[14px] text-[#444] leading-[1.65]"
+                  >
+                    {t(key)}
+                  </p>
+                ))}
               </div>
-            </Reveal>
+            </motion.div>
           </div>
 
-          {/* RIGHT column: one big image */}
-          <Reveal
-            direction="left"
-            delay={0.15}
-            className="w-full lg:w-110 shrink-0"
+          {/* RIGHT: big image (426×736) with hover float */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: easeOut }}
+            whileHover={{ y: -10 }}
+            className="group relative w-full xl:w-[426px] h-[420px] sm:h-[560px] xl:h-[736px] shrink-0 overflow-hidden"
           >
-            <div className="relative w-full h-72 sm:h-96 lg:h-full min-h-100 overflow-hidden">
-              <Image
-                src="/children.jpg"
-                alt={t("girlAlt")}
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 440px"
-              />
-            </div>
-          </Reveal>
+            <Image
+              src="/children.jpg"
+              alt={t("girlAlt")}
+              fill
+              className="object-cover object-center transition-transform duration-[1100ms] ease-out group-hover:scale-[1.06]"
+              sizes="(max-width: 1280px) 100vw, 426px"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
