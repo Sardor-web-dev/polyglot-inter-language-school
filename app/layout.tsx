@@ -47,11 +47,9 @@ export default async function RootLayout({
     <html lang={locale} className={`${cormorant.variable} ${inter.variable}`}>
       <body className="min-h-full antialiased">
         <NextIntlClientProvider messages={messages}>
-          <div className="pl-7 pr-7">
-            <Header />
-            <main>{children}</main>
-          </div>
-            <Footer />
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

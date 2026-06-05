@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
@@ -9,54 +12,84 @@ import {
   RiCarLine,
 } from "react-icons/ri";
 import type { IconType } from "react-icons";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Reveal } from "@/components/ui/Reveal";
+
+const ACTIVE_COLOR = "#FC9A19";
 
 export function CampusSection() {
   const t = useTranslations("campus");
+  const [active, setActive] = useState(0);
 
   const stats: Array<{ Icon: IconType; value: string; label: string }> = [
     { Icon: RiBuildingLine, value: t("stat1Value"), label: t("stat1Label") },
-    { Icon: RiFlaskLine,    value: t("stat2Value"), label: t("stat2Label") },
-    { Icon: RiCameraLine,   value: t("stat3Value"), label: t("stat3Label") },
-    { Icon: RiWindyLine,    value: t("stat4Value"), label: t("stat4Label") },
+    { Icon: RiFlaskLine, value: t("stat2Value"), label: t("stat2Label") },
+    { Icon: RiCameraLine, value: t("stat3Value"), label: t("stat3Label") },
+    { Icon: RiWindyLine, value: t("stat4Value"), label: t("stat4Label") },
     { Icon: RiRestaurantLine, value: t("stat5Value"), label: t("stat5Label") },
-    { Icon: RiCarLine,      value: t("stat6Value"), label: t("stat6Label") },
+    { Icon: RiCarLine, value: t("stat6Value"), label: t("stat6Label") },
   ];
 
   return (
-    <section className="bg-surface" aria-labelledby="campus-heading">
+    <section className="bg-white" aria-labelledby="campus-heading">
 
-      {/* Text row */}
-      <div className="max-w-360 mx-auto px-7.5 pt-16 md:pt-20 lg:pt-24 pb-10 md:pb-14">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-start">
+      {/* Top text — narrow heading left, narrow body right with wide gap */}
+      <div className="max-w-360 mx-auto px-7.5 pt-16 md:pt-20 lg:pt-24 pb-12 md:pb-16">
+        <Reveal className="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-0">
           <h2
             id="campus-heading"
-            className="font-serif font-semibold text-[#1a1a1a] leading-[1.1] text-[34px] md:text-[40px] lg:text-[44px]"
+            className="font-serif font-semibold text-[#1a1a1a] leading-[1.12] text-[32px] md:text-[40px] lg:text-[44px] lg:w-99.25 shrink-0"
           >
             {t("heading")}
           </h2>
-          <p className="text-[#444] text-[15px] md:text-[17px] leading-[1.75] lg:pt-1">
+          <p className="text-[#444] text-[15px] md:text-[16px] leading-[1.75] lg:w-192 lg:pt-2">
             {t("body")}
           </p>
+        </Reveal>
+      </div>
+
+      {/* Stats — interactive carousel */}
+      <div className="max-w-360 mx-auto px-7.5 pb-12 md:pb-16">
+        <div className="border-t border-[#e2e2e2] pt-9">
+          <Carousel opts={{ align: "start", dragFree: true }}>
+            <CarouselContent className="-ml-4">
+              {stats.map((stat, i) => {
+                const isActive = i === active;
+                return (
+                  <CarouselItem key={i} className="pl-4 basis-50 md:basis-57.5">
+                    <button
+                      type="button"
+                      onClick={() => setActive(i)}
+                      aria-pressed={isActive}
+                      className="group flex flex-col gap-3 text-left w-full pb-5 border-b-2 transition-colors duration-300"
+                      style={{ borderColor: isActive ? ACTIVE_COLOR : "transparent" }}
+                    >
+                      <stat.Icon
+                        size={34}
+                        aria-hidden="true"
+                        className="transition-colors duration-300"
+                        style={{ color: isActive ? ACTIVE_COLOR : "#b9b9b9" }}
+                      />
+                      <span
+                        className="font-serif font-semibold text-[22px] md:text-[24px] leading-snug transition-colors duration-300"
+                        style={{ color: isActive ? "#1a1a1a" : "#555" }}
+                      >
+                        {stat.value}
+                      </span>
+                      <span className="text-[#888] text-[13px] leading-snug">
+                        {stat.label}
+                      </span>
+                    </button>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
 
-      {/* Stats row */}
-      <div className="max-w-360 mx-auto px-7.5 pb-12 md:pb-16">
-        <dl className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4 border-t border-[#d5d0c5] pt-10">
-          {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col gap-2">
-              <stat.Icon size={22} className="text-accent" aria-hidden="true" />
-              <dt className="font-serif font-semibold text-[#1a1a1a] text-[19px] leading-snug">
-                {stat.value}
-              </dt>
-              <dd className="text-[#666] text-xs leading-snug">{stat.label}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-
-      {/* Campus render — contained within page gutters */}
-      <div className="max-w-360 mx-auto px-7.5 pb-16 md:pb-20">
+      {/* Campus render */}
+      <Reveal direction="up" className="max-w-360 mx-auto px-7.5 pb-16 md:pb-20">
         <div className="relative w-full aspect-16/7 overflow-hidden">
           <Image
             src="/campus.png"
@@ -66,7 +99,7 @@ export function CampusSection() {
             sizes="100vw"
           />
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

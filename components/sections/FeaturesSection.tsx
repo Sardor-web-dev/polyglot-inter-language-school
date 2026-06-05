@@ -1,5 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function FeaturesSection() {
   const t = useTranslations("features");
@@ -11,49 +21,60 @@ export function FeaturesSection() {
   ] as const;
 
   return (
-    <section className="bg-surface py-16 md:py-20 lg:py-24" aria-labelledby="features-heading">
+    <section
+      className="bg-white py-16 md:py-20 lg:py-24"
+      aria-labelledby="features-heading"
+    >
       <div className="max-w-360 mx-auto px-7.5">
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] xl:grid-cols-[340px_1fr] gap-10 lg:gap-14 xl:gap-16 items-start">
+        <Carousel opts={{ align: "start", dragFree: true }} className="text-[#1a1a1a]">
+          <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 lg:gap-14 xl:gap-16 items-start">
 
-          {/* Left — heading + description */}
-          <div className="lg:pt-1">
-            <h2
-              id="features-heading"
-              className="font-serif font-semibold text-[#1a1a1a] leading-[1.1] text-[36px] md:text-[42px] lg:text-[46px] mb-5"
-            >
-              {t("heading")}
-            </h2>
-            <p className="text-[#555] text-[15px] md:text-[16px] leading-[1.7]">
-              {t("subtext")}
-            </p>
-          </div>
+            {/* Left — heading + description + controls */}
+            <Reveal direction="right" className="lg:pt-1">
+              <h2
+                id="features-heading"
+                className="font-serif font-semibold text-[#1a1a1a] leading-[1.1] text-[36px] md:text-[42px] lg:text-[46px] mb-5"
+              >
+                {t("heading")}
+              </h2>
+              <p className="text-[#555] text-[15px] md:text-[16px] leading-[1.7] mb-8">
+                {t("subtext")}
+              </p>
+              <div className="flex gap-3">
+                <CarouselPrevious className="border-[#1a1a1a]/25 hover:bg-[#1a1a1a]/5" />
+                <CarouselNext className="border-[#1a1a1a]/25 hover:bg-[#1a1a1a]/5" />
+              </div>
+            </Reveal>
 
-          {/* Right — 3 cards, horizontally scrollable on mobile */}
-          <div className="overflow-x-auto -mx-7.5 md:mx-0 px-7.5 md:px-0">
-            <div className="grid grid-cols-3 gap-5 md:gap-7 min-w-160 lg:min-w-0">
+            {/* Right — cards carousel */}
+            <CarouselContent className="-ml-6">
               {cards.map((card) => (
-                <article key={card.title} className="flex flex-col">
-                  <div className="relative aspect-4/3 overflow-hidden mb-4">
-                    <Image
-                      src={card.image}
-                      alt={card.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 50vw, 25vw"
-                    />
-                  </div>
-                  <h3 className="font-semibold text-[#1a1a1a] text-[15px] mb-2">
-                    {card.title}
-                  </h3>
-                  <p className="text-[#555] text-[13px] md:text-[14px] leading-[1.65]">
-                    {card.body}
-                  </p>
-                </article>
+                <CarouselItem
+                  key={card.title}
+                  className="pl-6 basis-80 sm:basis-100"
+                >
+                  <article className="group flex flex-col w-full">
+                    <div className="relative aspect-4/3 overflow-hidden mb-4">
+                      <Image
+                        src={card.image}
+                        alt={card.alt}
+                        fill
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        sizes="400px"
+                      />
+                    </div>
+                    <h3 className="font-semibold text-[#1a1a1a] text-[16px] mb-2">
+                      {card.title}
+                    </h3>
+                    <p className="text-[#555] text-[14px] leading-[1.65]">
+                      {card.body}
+                    </p>
+                  </article>
+                </CarouselItem>
               ))}
-            </div>
+            </CarouselContent>
           </div>
-
-        </div>
+        </Carousel>
       </div>
     </section>
   );

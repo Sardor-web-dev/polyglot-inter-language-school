@@ -15,8 +15,8 @@ export function Header() {
   return (
     <>
       {/* ── Top bar ─────────────────────────────────────── */}
-      <header className="absolute top-0 left-0 right-0 z-50">
-        <div className="max-w-360 mx-auto px-7.5">
+      <header className="absolute top-7.5 left-0 right-0 z-50">
+        <div className="max-w-360 mx-auto px-7.5 lg:px-12.5">
           <div className="flex items-center justify-between h-18 lg:h-21">
 
             {/* Left: hamburger + label */}

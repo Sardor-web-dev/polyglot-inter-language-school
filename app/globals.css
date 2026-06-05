@@ -3,11 +3,11 @@
 /* ─── Design tokens ─────────────────────────────────────── */
 :root {
   --primary:         #142444;   /* darkest navy */
-  --navy-section:    #1B3C78;   /* medium navy — school choice section */
+  --navy-section:    #0E4170;   /* school choice section — full-bleed */
   --enrollment-bg:   #0F2040;   /* dark navy — enrollment section */
   --accent:          #C4911E;   /* gold / amber */
   --accent-hover:    #D4A32E;
-  --surface:         #F5F1E8;   /* warm cream */
+  --surface:         #ffffff;   /* sections background — white */
   --text-base:       #1a1a1a;
   --text-muted:      #888888;
   --text-soft:       #555555;
