@@ -46,30 +46,32 @@ export function FeaturesSection() {
               </div>
             </Reveal>
 
-            {/* Right — cards carousel (w-[400px], h-auto) */}
+            {/* Right — cards carousel, each card staggers in via Reveal delay */}
             <CarouselContent className="-ml-6">
-              {cards.map((card) => (
+              {cards.map((card, i) => (
                 <CarouselItem
                   key={card.title}
                   className="pl-6 basis-auto"
                 >
-                  <article className="group flex flex-col w-75 sm:w-100 h-auto">
-                    <div className="relative w-full h-75 overflow-hidden mb-4">
-                      <Image
-                        src={card.image}
-                        alt={card.alt}
-                        fill
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-                        sizes="400px"
-                      />
-                    </div>
-                    <h3 className="font-semibold text-[#1a1a1a] text-[16px] mb-2">
-                      {card.title}
-                    </h3>
-                    <p className="text-[#555] text-[14px] leading-[1.65]">
-                      {card.body}
-                    </p>
-                  </article>
+                  <Reveal direction="up" delay={i * 0.13}>
+                    <article className="group flex flex-col w-75 sm:w-100 h-auto">
+                      <div className="relative w-full h-75 overflow-hidden mb-4">
+                        <Image
+                          src={card.image}
+                          alt={card.alt}
+                          fill
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                          sizes="400px"
+                        />
+                      </div>
+                      <h3 className="font-semibold text-[#1a1a1a] text-[16px] mb-2">
+                        {card.title}
+                      </h3>
+                      <p className="text-[#555] text-[14px] leading-[1.65]">
+                        {card.body}
+                      </p>
+                    </article>
+                  </Reveal>
                 </CarouselItem>
               ))}
             </CarouselContent>

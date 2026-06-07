@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -40,20 +41,36 @@ export function SchoolChoiceSection() {
       >
         {/* Heading + controls */}
         <div className="max-w-360 mx-auto px-7.5 pb-10 md:pb-12 flex items-end justify-between gap-6">
-          <h2
+          <motion.h2
             id="school-choice-heading"
+            initial={{ opacity: 0, y: 60, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="font-serif font-semibold text-white leading-[1.1] text-[34px] sm:text-[42px] md:text-[50px] lg:text-[56px] max-w-3xl"
           >
             {t("heading")}
-          </h2>
-          <div className="hidden md:flex gap-3 shrink-0 pb-2">
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden md:flex gap-3 shrink-0 pb-2"
+          >
             <CarouselPrevious className="border-white/40 hover:bg-white/10" />
             <CarouselNext className="border-white/40 hover:bg-white/10" />
-          </div>
+          </motion.div>
         </div>
 
         {/* Photos — left aligned to gutter, bleed right */}
-        <div className="pl-7.5">
+        <motion.div
+          className="pl-7.5"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        >
           <CarouselContent className="ml-0">
             {photos.map((photo, i) => (
               <CarouselItem
@@ -75,7 +92,7 @@ export function SchoolChoiceSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-        </div>
+        </motion.div>
       </Carousel>
     </section>
   );
