@@ -51,12 +51,6 @@ export function Header() {
             {/* Right: lang switcher + ВОЙТИ */}
             <div className="flex items-center gap-5 shrink-0">
               <LocaleSwitcher />
-              <Link
-                href="/login"
-                className="text-[11px] font-medium tracking-widest uppercase text-white border border-white/55 hover:border-white hover:bg-white/15 hover:backdrop-blur-md px-5 py-2.25 transition duration-300"
-              >
-                {t("login")}
-              </Link>
             </div>
           </div>
         </div>
